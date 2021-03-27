@@ -1,4 +1,4 @@
-# Ứng dụng Web Online Shop về mặt hàng điện tử - nhóm 
+# Ứng dụng Web Online Shop về mặt hàng điện tử - Nhóm B2 
 ## Danh sách thành viên:
 <ul>
   <li> Thành viên số 1: Nguyễn Mỹ Uyên </li>
