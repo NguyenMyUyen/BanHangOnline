@@ -1,0 +1,42 @@
+﻿@model WebBanHangDT.Model.KHUYENMAI
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>KHUYENMAI</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenKhuyenMai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenKhuyenMai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayBatDau)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayBatDau)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayKetThuc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayKetThuc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaKhuyenMai }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

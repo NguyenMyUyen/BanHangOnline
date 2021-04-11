@@ -1,0 +1,42 @@
+﻿@model WebBanHangDT.Model.CHITIETKM
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CHITIETKM</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KHUYENMAI.TenKhuyenMai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KHUYENMAI.TenKhuyenMai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SANPHAM.TenSanPham)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SANPHAM.TenSanPham)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PHANTRAMKM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PHANTRAMKM)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

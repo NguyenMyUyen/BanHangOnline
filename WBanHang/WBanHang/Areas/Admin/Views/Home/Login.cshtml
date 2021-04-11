@@ -1,0 +1,61 @@
+﻿
+@{
+    Layout = null;
+}
+
+@*<h2>Login</h2>*@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Đăng nhập Admin </title>
+    <!-- Bootstrap -->
+    <link href="~/Areas/Admin/Content/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="~/Areas/Admin/Content/vendors/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="~/Areas/Admin/Content/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link href="~/Areas/Admin/Content/vendors/animate.css/animate.min.css" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="~/Areas/Admin/Content/build/css/custom.min.css" rel="stylesheet">
+</head>
+<body class="login">
+    <div>
+        <a class="hiddenanchor" id="signup"></a>
+        <a class="hiddenanchor" id="signin"></a>
+        <div class="login_wrapper">
+            <div class="animate form login_form">
+                <section class="login_content">
+                    <form action="/Admin/Home/Login" method="post">
+                        <h1>Đăng nhập hệ thống </h1>
+                        <div>
+                            <input type="text" name="username" class="form-control" placeholder="Username" required="" />
+                        </div>
+                        <div>
+                            <input type="password" name="password" class="form-control" placeholder="Password" required="" />
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-primary">Đăng Nhập </button>
+                            <a class="reset_pass" href="#">Quên password ?</a>
+                        </div>
+                        <div class="clearfix"></div>
+
+                        <div class="separator">
+                            <p class="change_link">
+                                Tạo tài khoản mới
+                                <a href="#signup" class="to_resgister">Tạo tài khoản</a>
+                            </p>
+                        </div>
+                        <p>ViewBag.error</p>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
