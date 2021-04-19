@@ -1,0 +1,59 @@
+﻿@model IEnumerable<BHDT.Model.User>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Danh sách User</h2>
+
+<p>
+    @Html.ActionLink("Thêm mới", "Create")
+</p>
+<table class="table table-bordered table-hover">
+    
+        <tr>
+            <th>
+                UserName
+            </th>
+            <th>
+                PassWord
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Phone
+            </th>
+            <th>
+                Allowed
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PassWord)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Allowed)
+                </td>
+                <td>
+                    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.UserId }) |
+                    @Html.ActionLink("Chi tiết", "Details", new { id = item.UserId }) |
+                    @Html.ActionLink("Xoá", "Delete", new { id = item.UserId })
+                </td>
+            </tr>
+        }
+
+    </table>

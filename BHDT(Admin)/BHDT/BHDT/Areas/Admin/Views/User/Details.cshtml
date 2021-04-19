@@ -1,0 +1,58 @@
+﻿@model BHDT.Model.User
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Chi tiết</h2>
+
+<div>
+    <h4>Danh sách User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            UserName
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+
+        <dt>
+           PassWord
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PassWord)
+        </dd>
+
+        <dt>
+            Email
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+           Phone
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+           Allowed
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Allowed)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("chỉnh sửa", "Edit", new { id = Model.UserId }) |
+    @Html.ActionLink("Quay lại danh sách", "Index")
+</p>

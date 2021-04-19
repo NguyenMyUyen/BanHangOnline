@@ -1,0 +1,45 @@
+﻿@model IEnumerable<BHDT.Model.NhaSanXuat>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Danh sách Nhà Sản Xuất</h2>
+
+<p>
+    @Html.ActionLink("Thêm mới", "Create")
+</p>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>
+            Tên NSX
+        </th>
+        <th>
+            Thông Tin
+        </th>
+        <th>
+            Logo
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenNSX)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThongTin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Logo)
+        </td>
+        <td>
+            @Html.ActionLink("Chỉnh sửa", "Edit", new { id=item.MaNSX }) |
+            @Html.ActionLink("Chi tiết", "Details", new { id=item.MaNSX }) |
+            @Html.ActionLink("Xoá", "Delete", new { id=item.MaNSX })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,42 @@
+﻿@model BHDT.Model.NhaSanXuat
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Chi tiết</h2>
+
+<div>
+    <h4>Danh sách Nhà Sản Xuất</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên NSX
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenNSX)
+        </dd>
+
+        <dt>
+            Thông Tin
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThongTin)
+        </dd>
+
+        <dt>
+            Logo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Logo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.MaNSX }) |
+    @Html.ActionLink("Quay lại danh sách", "Index")
+</p>

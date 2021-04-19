@@ -1,0 +1,48 @@
+﻿@model BHDT.Model.NhaSanXuat
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Xoá</h2>
+
+<h3>Bạn có chắc muốn xoá?</h3>
+<div>
+    <h4>Danh sách Nhà Sản Xuất</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên NSX
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenNSX)
+        </dd>
+
+        <dt>
+            Thông Tin
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThongTin)
+        </dd>
+
+        <dt>
+            Logo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Logo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xoá" class="btn btn-default" /> |
+            @Html.ActionLink("Quay lại danh sách", "Index")
+        </div>
+    }
+</div>

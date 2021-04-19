@@ -1,0 +1,42 @@
+﻿@model BHDT.Model.PhieuNhap
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Chi tiết</h2>
+
+<div>
+    <h4>Danh sách Phiếu Nhập</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Nhà Cung Cấp - Tên NCC
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhaCungCap.TenNCC)
+        </dd>
+
+        <dt>
+            Ngày Nhập
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayNhap)
+        </dd>
+
+        <dt>
+            Đã Xoá
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DaXoa)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.MaPN }) |
+    @Html.ActionLink("Quay lại danh sách", "Index")
+</p>

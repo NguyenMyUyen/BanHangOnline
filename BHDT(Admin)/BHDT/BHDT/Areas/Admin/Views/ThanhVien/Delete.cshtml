@@ -1,0 +1,96 @@
+﻿@model BHDT.Model.ThanhVien
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Xoá</h2>
+
+<h3>Bạn có chắc muốn xoá?</h3>
+<div>
+    <h4>Danh sách Thành Viên</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Loại Thành Viên - Tên Loại
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoaiThanhVien.TenLoai)
+        </dd>
+
+        <dt>
+            Tài Khoản
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaiKhoan)
+        </dd>
+
+        <dt>
+            Mật Khẩu
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MatKhau)
+        </dd>
+
+        <dt>
+            Họ Tên
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoTen)
+        </dd>
+
+        <dt>
+            Địa Chỉ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaChi)
+        </dd>
+
+        <dt>
+            Email
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+           SĐT
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SDT)
+        </dd>
+
+        <dt>
+            Câu Hỏi
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CauHoi)
+        </dd>
+
+        <dt>
+            Câu Trả Lời
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CauTraLoi)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xoá" class="btn btn-default" /> |
+            @Html.ActionLink("Quay lại danh sách", "Index")
+        </div>
+    }
+</div>

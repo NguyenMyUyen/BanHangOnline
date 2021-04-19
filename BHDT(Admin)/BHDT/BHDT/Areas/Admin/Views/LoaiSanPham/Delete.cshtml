@@ -1,0 +1,48 @@
+﻿@model BHDT.Model.LoaiSanPham
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Xoá</h2>
+
+<h3>Bạn có chắc muốn xoá?</h3>
+<div>
+    <h4>Danh sách Loại Sản Phẩm</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên Loại
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenLoai)
+        </dd>
+
+        <dt>
+            Icon
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Icon)
+        </dd>
+
+        <dt>
+            Bí Danh
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BiDanh)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xoá" class="btn btn-default" /> |
+            @Html.ActionLink("Quay lại danh sách", "Index")
+        </div>
+    }
+</div>

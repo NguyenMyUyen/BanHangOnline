@@ -1,0 +1,44 @@
+﻿@model BHDT.Model.LoaiSanPham
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Chi tiết</h2>
+
+<div>
+    <h4>Danh sách Loại Sản Phẩm</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên Loại
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenLoai)
+        </dd>
+
+        <dt>
+            Icon
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Icon)
+        </dd>
+
+        <dt>
+            Bí Danh
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BiDanh)
+        </dd>
+
+    </dl>
+
+    
+</div>
+<p>
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.MaLoaiSP }) |
+    @Html.ActionLink("Quay lại danh sách", "Index")
+</p>

@@ -1,0 +1,58 @@
+﻿@model IEnumerable<BHDT.Model.KhachHang>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Danh sách Khách Hàng</h2>
+
+<p>
+    @Html.ActionLink("Thêm mới", "Create")
+</p>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>
+            Thành Viên - Tài Khoản
+        </th>
+        <th>
+            Tên KH
+        </th>
+        <th>
+            Địa Chỉ
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            SĐT
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ThanhVien.TaiKhoan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenKH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiaChi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SDT)
+            </td>
+            <td>
+                @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.MaKH }) |
+                @Html.ActionLink("Chi tiết", "Details", new { id = item.MaKH }) |
+                @Html.ActionLink("Xoá", "Delete", new { id = item.MaKH })
+            </td>
+        </tr>
+    }
+
+</table>

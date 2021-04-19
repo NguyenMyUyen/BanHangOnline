@@ -1,0 +1,64 @@
+﻿@model IEnumerable<BHDT.Model.DonDatHang>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Danh sách Đơn Đặt Hàng</h2>
+
+<p>
+    @Html.ActionLink("Thêm mới", "Create")
+</p>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>
+            Khách Hàng - Tên KH
+        </th>
+        <th>
+            Ngày Đặt
+        </th>
+        <th>
+            Tình Trạng Giao Hàng
+        </th>
+        <th>
+            Ngày Giao
+        </th>
+        <th>
+            Đã Thanh Toán
+        </th>
+        <th>
+            Ưu đãi
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.KhachHang.TenKH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayDat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TinhTrangGiaoHang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayGiao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DaThanhToan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UuDai)
+            </td>
+            <td>
+                @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.MaDDH }) |
+                @Html.ActionLink("Chi tiết", "Details", new { id = item.MaDDH }) |
+                @Html.ActionLink("Xoá", "Delete", new { id = item.MaDDH })
+            </td>
+        </tr>
+    }
+
+</table>

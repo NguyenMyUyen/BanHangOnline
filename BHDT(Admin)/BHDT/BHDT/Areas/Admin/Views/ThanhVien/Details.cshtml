@@ -1,0 +1,90 @@
+﻿@model BHDT.Model.ThanhVien
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Chi tiết</h2>
+
+<div>
+    <h4>Danh sách thành viên</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Loại Thành Viên - Tên Loại
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoaiThanhVien.TenLoai)
+        </dd>
+
+        <dt>
+            Tài Khoản
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaiKhoan)
+        </dd>
+
+        <dt>
+            Mật Khẩu
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MatKhau)
+        </dd>
+
+        <dt>
+            Họ Tên
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoTen)
+        </dd>
+
+        <dt>
+            Địa Chỉ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaChi)
+        </dd>
+
+        <dt>
+            Email
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            SĐT
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SDT)
+        </dd>
+
+        <dt>
+            Câu Hỏi
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CauHoi)
+        </dd>
+
+        <dt>
+            Câu Trả Lời
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CauTraLoi)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.MaTV }) |
+    @Html.ActionLink("Quay lại danh sách", "Index")
+</p>

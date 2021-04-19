@@ -1,0 +1,42 @@
+﻿@model BHDT.Model.BinhLuan
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Chi tiết</h2>
+
+<div>
+    <h4>Danh sách Bình Luận</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Sản Phẩm - Tên SP
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SanPham.TenSP)
+        </dd>
+
+        <dt>
+            Thành Viên - Tài Khoản
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThanhVien.TaiKhoan)
+        </dd>
+
+        <dt>
+            Nội Dung Bình Luận
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoiDungBL)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.MaBL }) |
+    @Html.ActionLink("Quay lại danh sách", "Index")
+</p>

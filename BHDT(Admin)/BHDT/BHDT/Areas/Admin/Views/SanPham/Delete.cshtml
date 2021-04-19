@@ -1,0 +1,152 @@
+﻿@model BHDT.Model.SanPham
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Xoá</h2>
+
+<h3>Bạn có chắc muốn xoá?</h3>
+<div>
+    <h4>Danh sách Sản Phẩm</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Loại Sản Phẩm - Tên Loại
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoaiSanPham.TenLoai)
+        </dd>
+
+        <dt>
+            Nhà Cung Cấp - NCC
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhaCungCap.TenNCC)
+        </dd>
+
+        <dt>
+            Nhà Sản Xuất - NSX
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhaSanXuat.TenNSX)
+        </dd>
+
+        <dt>
+            Tên Sản Phẩm
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSP)
+        </dd>
+
+        <dt>
+            Đơn Giá
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DonGia)
+        </dd>
+
+        <dt>
+            Ngày Cập Nhập
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayCapNhap)
+        </dd>
+
+        <dt>
+            Cấu Hình
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CauHinh)
+        </dd>
+
+        <dt>
+            Mô Tả
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mota)
+        </dd>
+
+        <dt>
+            Hình Ảnh
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HinhAnh)
+        </dd>
+
+        <dt>
+            Số Lượng Tồn
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuongton)
+        </dd>
+
+        <dt>
+            Lượt Xem
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LuotXem)
+        </dd>
+
+        <dt>
+            Lượt Bình Chọn
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LuotBinhChon)
+        </dd>
+
+        <dt>
+            Số Lần Mua
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLanMua)
+        </dd>
+
+        <dt>
+            Mới
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Moi)
+        </dd>
+
+        <dt>
+            Đã Xoá
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DaXoa)
+        </dd>
+
+        <dt>
+            Sale
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sale)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xoá" class="btn btn-default" /> |
+            @Html.ActionLink("Quay lại danh sách", "Index")
+        </div>
+    }
+</div>

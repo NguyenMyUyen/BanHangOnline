@@ -1,0 +1,58 @@
+﻿@model BHDT.Model.KhachHang
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Chi tiết Khách Hàng</h2>
+
+<div>
+    <h4>Danh sách Khách Hàng</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Thành Viên - Tài Khoản
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThanhVien.TaiKhoan)
+        </dd>
+
+        <dt>
+            Tên KH
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenKH)
+        </dd>
+
+        <dt>
+            Địa Chỉ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaChi)
+        </dd>
+
+        <dt>
+            Email
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            SĐT
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SDT)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.MaKH }) |
+    @Html.ActionLink("Quay lại danh sách", "Index")
+</p>

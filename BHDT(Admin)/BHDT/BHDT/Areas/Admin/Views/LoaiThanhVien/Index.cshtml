@@ -1,0 +1,40 @@
+﻿@model IEnumerable<BHDT.Model.LoaiThanhVien>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Danh sách Loại Thành Viên</h2>
+
+<p>
+    @Html.ActionLink("Thêm mới", "Create")
+</p>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>
+            Tên Loại
+        </th>
+        <th>
+            Ưu đãi
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenLoai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UuDai)
+            </td>
+            <td>
+                @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.MaLoaiTV }) |
+                @Html.ActionLink("Chi tiết", "Details", new { id = item.MaLoaiTV }) |
+                @Html.ActionLink("Xoá", "Delete", new { id = item.MaLoaiTV })
+            </td>
+        </tr>
+    }
+
+</table>

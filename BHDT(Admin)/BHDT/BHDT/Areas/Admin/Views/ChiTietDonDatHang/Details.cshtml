@@ -1,0 +1,59 @@
+﻿@model BHDT.Model.ChiTietDonDatHang
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Chi tiết</h2>
+
+<div>
+    <h4>Danh sách Chi Tiết Đơn Đặt Hàng</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Đơn Đặt Hàng - Mã Đơn Đặt Hàng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DonDatHang.MaDDH)
+        </dd>
+
+        <dt>
+            Sản Phẩm - Tên SP
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SanPham.TenSP)
+        </dd>
+
+        <dt>
+            Tên SP
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSP)
+        </dd>
+
+        <dt>
+            Số Lượng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuong)
+        </dd>
+
+        <dt>
+            Đơn Giá
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DonGia)
+        </dd>
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.MaChiTietDDH }) |
+    @Html.ActionLink("Quay lại danh sách", "Index")
+</p>
