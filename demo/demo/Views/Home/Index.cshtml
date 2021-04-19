@@ -1,0 +1,23 @@
+﻿@using demo.Models;
+@model IEnumerable<SANPHAM>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+ 
+}
+@{
+    //IEnumerable<SANPHAM> lstLap = (IEnumerable<SANPHAM>)ViewBag.ListLAPTOP; ep kieu 1
+    IEnumerable<SANPHAM> lstLap = ViewBag.ListLAPTOP as IEnumerable<SANPHAM>;
+}
+<div class="col l-2 m-0 c-0"></div>
+<div class="col l-10 m-12 c-12">
+    <div class="home-filter hide-on-mobile-tablet"></div>
+    <nav class="mobile-category">
+    
+    </nav>
+        <div class="home-product">
+            <div class="row sm-gutter">
+                @Html.Partial("~/Views/SanPham/SanPhamStyle1Partial.cshtml", lstLap)
+            </div>
+        </div>
+</div>
