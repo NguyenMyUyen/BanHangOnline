@@ -59,13 +59,14 @@
                             <ul class="nav side-menu">
 
                                 <li><a href="/Admin/Admin_User/Index"><i class="fa fa-user"></i>USER</a></li>
-                                <li><a href="/Admin/CT_DonHang/Index"><i class="fa fa-industry"></i>Nhà Sản Xuất</a></li>
-                                <li><a href="/Admin/DonHang/Index"><i class="fa fa-home"></i>Nhà Cung Cấp</a></li>
-                                <li><a href="/Admin/KhachHang/Index"><i class="fa fa-book"></i>Loại Sản Phẩm</a></li>
+                                <li><a href="/Admin/NhaSanXuat/Index"><i class="fa fa-industry"></i>Nhà Sản Xuất</a></li>
+                                @*<li><a href="/Admin/KhachHang/Index"><i class="fa fa-book"></i></a></li>*@
+                                <li><a href="/Admin/DonHang/Index"><i class="fa fa-user-plus"></i>Đơn hàng</a></li>
+                                <li><a href="/Admin/CT_DonHang/Index"><i class="fa fa-user-plus"></i>Chi tiết đơn hàng</a></li>
                                 <li><a href="/Admin/SanPham/Index"><i class="fa fa-usb"></i>Sản Phẩm</a></li>
-                                <li><a href="/Admin/LoaiSanPham/Index"><i class="fa fa-user-md"></i>Thành Viên </a></li>
+                                <li><a href="/Admin/LoaiSanPham/Index"><i class="fa fa-user-md"></i>Loại Sản Phẩm </a></li>
                                 <li><a href="/Admin/KhachHang/Index"><i class="fa fa-user-plus"></i>Khách Hàng</a></li>
-                           
+
 
 
 
@@ -75,20 +76,20 @@
                     </div>
                     <!-- /sidebar menu -->
                     <!-- /menu footer buttons -->
-                    <div class="sidebar-footer hidden-small">
-                        <a data-toggle="tooltip" data-placement="top" title="Settings">
-                            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-                        </a>
-                        <a data-toggle="tooltip" data-placement="top" title="FullScreen">
-                            <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
-                        </a>
-                        <a data-toggle="tooltip" data-placement="top" title="Lock">
-                            <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-                        </a>
-                        <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
-                            <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-                        </a>
-                    </div>
+                    @*<div class="sidebar-footer hidden-small">
+                            <a data-toggle="tooltip" data-placement="top" title="Settings">
+                                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                            </a>
+                            <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                            </a>
+                            <a data-toggle="tooltip" data-placement="top" title="Lock">
+                                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+                            </a>
+                            <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+                                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                            </a>
+                        </div>*@
                     <!-- /menu footer buttons -->
                 </div>
             </div>
@@ -173,6 +174,8 @@
     <script src="~/Areas/Admin/Content/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
     <!-- Custom Theme Scripts -->
     <script src="~/Areas/Admin/Content/build/js/custom.min.js"></script>
+    <script src="~/Scripts/Script.js"></script>
+
 
 </body>
 </html>

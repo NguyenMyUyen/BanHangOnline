@@ -1,0 +1,42 @@
+﻿@model WebBHDT1.Model.NhaSanXuat
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NhaSanXuat</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenNSX)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenNSX)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThongTin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThongTin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Logo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Logo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaNSX }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

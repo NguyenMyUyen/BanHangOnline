@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using WebBHDT1.Model;
+using System.IO;
 
 namespace WebBHDT.Areas.Admin.Controllers
 {
@@ -53,9 +54,30 @@ namespace WebBHDT.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.SanPhams.Add(sanPham);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                try
+                {
+                    // TODO: Add insert logic here
+                    if (sanPham.ImageUpload != null)
+                    {
+                        string file = Path.GetFileNameWithoutExtension(sanPham.ImageUpload.FileName);
+                        string extension = Path.GetExtension(sanPham.ImageUpload.FileName);
+                        file = file + extension;
+                        sanPham.HinhAnh = "/Content/images/" + file;
+                        sanPham.HinhAnh1 = "/Content/images/" + file;
+                        sanPham.HinhAnh2 = "/Content/images/" + file;
+                        sanPham.HinhAnh3 = "/Content/images/" + file;
+                        sanPham.HinhAnh4 = "/Content/images/" + file;
+                        //pro.MoreImages= "~/Contents/images/" + file;
+                        sanPham.ImageUpload.SaveAs(Path.Combine(Server.MapPath("/Content/images/"), file));
+                    }
+                    db.SanPhams.Add(sanPham);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                catch (Exception e)
+                {
+                    return View();
+                }
             }
 
             ViewBag.MaLoaiSP = new SelectList(db.LoaiSanPhams, "MaLoaiSP", "TenLoai", sanPham.MaLoaiSP);
@@ -123,6 +145,12 @@ namespace WebBHDT.Areas.Admin.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult SearchName(string searchString)
+        {
+            return View(db.SanPhams.Where(s => s.TenSP.Contains(searchString) || searchString == null).ToList());
+          
+        }
+
 
         protected override void Dispose(bool disposing)
         {

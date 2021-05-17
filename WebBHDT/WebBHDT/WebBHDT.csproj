@@ -163,6 +163,7 @@
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\KhachHangController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoaiSanPhamController.cs" />
+    <Compile Include="Areas\Admin\Controllers\NhaSanXuatController.cs" />
     <Compile Include="Areas\Admin\Controllers\SanPhamController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -4760,6 +4761,13 @@
     <Content Include="Areas\Admin\Views\SanPham\Details.cshtml" />
     <Content Include="Areas\Admin\Views\SanPham\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\SanPham\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\SanPham\SearchName.cshtml" />
+    <Content Include="Areas\Admin\Views\NhaSanXuat\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\NhaSanXuat\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\NhaSanXuat\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\NhaSanXuat\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\NhaSanXuat\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\DonHang\SearchName.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -4771,6 +4779,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\Script.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

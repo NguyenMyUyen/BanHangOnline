@@ -5,6 +5,7 @@ namespace WebBHDT1.Model
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using System.Web;
 
     [Table("SanPham")]
     public partial class SanPham
@@ -53,5 +54,7 @@ namespace WebBHDT1.Model
         public virtual LoaiSanPham LoaiSanPham { get; set; }
 
         public virtual NhaSanXuat NhaSanXuat { get; set; }
+        [NotMapped]
+        public HttpPostedFileBase ImageUpload { get; set; }
     }
 }

@@ -1,14 +1,14 @@
-﻿@model IEnumerable<WebBHDT1.Model.DonHang>
+﻿
+@{
+    ViewBag.Title = "SearchName";
+}
+@model IEnumerable<WebBHDT1.Model.DonHang>
 
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
-@using (Html.BeginForm("SearchName", "SanPham", FormMethod.Get))
-{
-    @Html.TextBox("searchString")<input type="submit" value="Search" />
-}
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -66,3 +66,5 @@
     }
 
 </table>
+
+

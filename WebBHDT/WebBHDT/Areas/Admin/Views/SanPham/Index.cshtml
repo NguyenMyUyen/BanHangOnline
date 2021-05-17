@@ -3,8 +3,11 @@
 @{
     ViewBag.Title = "Index";
 }
-
 <h2>Index</h2>
+@using (Html.BeginForm("SearchName", "SanPham", FormMethod.Get))
+{
+    @Html.TextBox("searchString")<input type="submit" value="Search" />
+}
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -56,56 +59,60 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.LoaiSanPham.TenLoai)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NhaSanXuat.TenNSX)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TenSP)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DonGia)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NgayCapNhap)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Mota)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HinhAnh)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DaXoa)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HinhAnh1)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HinhAnh2)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HinhAnh3)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HinhAnh4)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SoLuong)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Tinhtrang)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MaSP }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MaSP }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MaSP })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoaiSanPham.TenLoai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NhaSanXuat.TenNSX)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenSP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DonGia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayCapNhap)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mota)
+            </td>
+            <td>
+                @*@Html.DisplayFor(modelItem => item.HinhAnh)*@
+                <img src="@item.HinhAnh" width="50" height="50" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DaXoa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HinhAnh1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HinhAnh2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HinhAnh3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HinhAnh4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoLuong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tinhtrang)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MaSP }) |
+                @Html.ActionLink("Details", "Details", new { id = item.MaSP }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.MaSP })
+            </td>
+        </tr>
+    }
+
 
 </table>
+<script src="~/Scripts/Script.js"></script>
